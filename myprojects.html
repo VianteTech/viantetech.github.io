@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="type2.css" />
+    <title>This is my personal website</title>
+    <script src="https://kit.fontawesome.com/fda81483dd.js" crossorigin="anonymous"></script>
+</head>
+<body class="fain">
+    <header>
+        <label onclick="changecolor()" style="float:right">
+            <img class="fain" id="change" onclick="myFunction()" src="pictures/dark mode.png" width="50">
+        </label>
+        <h1 style="animation: fadeIn 1s ease 0s;">Welcome to my official website. :)</h1> 
+        <br>
+        <nav class="navbar fain">
+            <ul>
+                <li><a href="\home.html">Home</a></li>
+                <li><a href="\aboutme.html">About Me</a></li>
+                <li><a href="\myprojects.html">My Projects</a></li>
+                <li><a href="\contacts.html">Contacts</a></li>
+                <li>
+                    <div class="dropdown clo">
+                        <button class="dropbtn" style="position:absolute;right:0;">
+                            <i class="fa-solid fa-bars" ></i>
+                        </button>
+                        <div class="dropdown-content clo" style="position:absolute;right:0;top:145px">
+                          <a href="\home.html">Home</a>
+                          <a href="\aboutme.html">About Me</a>
+                          <a href="\myprojects.html">My Projects</a>
+                          <a href="\contacts.html">Contacts</a>
+                        </div>
+                    </div> 
+                </li>
+            </ul>
+            </ul>
+         </nav>       
+    </header>
+    <main>  
+        <h2 class="page" id="type"></h2>
+        <div>
+            <div>
+                <button class="collapsible clo" style="text-align: left;">https://(*)/passcrack.html: My 1st website project.</button>
+                <div class="content">
+                    <p>
+                        Yeah, it's my very first website project. <br>
+                        It's just about password crackings that is built with TailwindCSS, Javascript and HTML.<br>
+                        Website is not hosted yet, it is under developement :).<br>
+                        (*): This means it has the main port of live server in Visual Studio Code.
+                    </p>
+                </div>
+                <button class="collapsible clo" style="text-align: left;">https://viantetech.pages.dev: My 2nd website project.</button>
+                <div class="content">
+                    <p>
+                        This is my second website project. <br>
+                        It's about me and the other things :).<br>
+                        Website is hosted using Cloudflare and updated using Github.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <h2 style="text-align: center; color:blue">Website Version Updates</h2>
+                <p style="text-align: center;"><b>
+                    Version 1.0: Current Beta Testing and Updating.<br>
+                    Version 1.1: Current Updating with no boring features :).<br>
+                    Version 1.2: Current registering a domain from Cloudfare and Updating from Github (.pages.dev).<br>
+                    Version 1.3: Website rolling out for everyone to visit :).<br>
+                </b></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        <p class="fain" style="text-align: center;"><b>Author: Dave/Viante.<br>
+        &copy; Copyright Reserved: 2023 (Dave/Viante) | Built with HTML, CSS, Javascript.<br>
+        Current Time: <label id="time"></label></b></p>
+    </footer>
+    <script src="type2.js"></script>
+</body>
+</html>

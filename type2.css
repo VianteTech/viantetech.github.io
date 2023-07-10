@@ -1,0 +1,159 @@
+:root{
+    --color: white;
+    --background: black; 
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+  clear:both;
+}
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  min-width: 160px;
+}
+.fain{
+  animation: fadeIn 1.5s ease 0s;
+}
+.dropdown-content a{
+  float: none;
+  padding: 12px 16px;
+  text-align: left;
+  color: orange !important;;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.fa-discord, .fa-twitter, .fa-github, .fa-youtube, .fa-facebook, .fa-bars{
+    color: var(--color);
+    animation: fadeIn 4.4s ease 0s;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		top: 55%;
+	}
+  to {
+		opacity: 1;
+		top: 50%;
+	}
+}
+body{
+    background-color: var(--background);
+    color:var(--color);
+    clear: both;
+}
+.clo{
+  color:var(--color);
+  clear: both;
+}
+.text{
+    clear: both;
+    color:var(--color);
+}
+.pad{
+    padding: 30px 5px 15px 20px;
+    clear: both;
+    text-align: center;
+    position: relative;
+}
+a:link {
+  clear:both;
+  background-color: transparent;
+}
+
+a:visited {
+  clear:both;
+  background-color: transparent;
+}
+
+a:hover {
+  clear:both;
+  color: green;
+  background-color: transparent;
+}
+
+a:active {
+  clear:both;
+  background-color: transparent;
+}
+body{
+  margin: 0px;
+}
+main{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+h1{
+  text-align: center;
+}
+.navbar ul{
+  list-style-type: none;
+  background-color: hsl(0,0%,25%);
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+.mefo{
+  list-style-type: none;
+  padding: 15px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  display: block;
+}
+.navbar a{
+  color: var(--color);
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+.navbar a:hover{
+  background-color: hsl(0,0%,10%);
+  color:blue;
+}
+.navbar li{
+  float:left;
+}
+.page{
+  clear:both;
+  text-align: center;
+}
+.page:hover{
+  color:green;
+  
+}
+.collapsible {
+  background-color: #777;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.active, .collapsible:hover {
+  background-color: #555;
+  color:blue;
+}
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: lightsalmon;
+}
+span[hide-href]{
+  cursor:pointer;
+  background-color: transparent;
+}
