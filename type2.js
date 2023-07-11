@@ -7,7 +7,7 @@ function displaytime(){
   document.getElementById("time").innerHTML = time;
   setTimeout(displaytime, 1000); 
 }
-function changecolor(){
+document.getElementById('change').onclick=function(){
     if (change==0 || save==0){
         r.style.setProperty('--color', 'black');
         r.style.setProperty('--background', 'white');
@@ -21,15 +21,15 @@ function changecolor(){
         save=change;
     }
 }
-let i=0;
-function myFunction() {
-    if(i==0){
-    document.getElementById("change").src = "pictures/light mode.png";
-    i=1;
+let i=1;
+document.getElementById('myf').onclick=function(){
+    if(i==1){
+    document.getElementById("myf").src = "pictures/light mode.png";
+    i=2;
     }
     else{
-    document.getElementById("change").src = "pictures/dark mode.png";
-    i=0;
+    document.getElementById("myf").src = "pictures/dark mode.png";
+    i=1;
     }
 }
 export function type (txt='') {
