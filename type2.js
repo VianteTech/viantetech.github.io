@@ -32,31 +32,17 @@ function myFunction() {
     i=0;
     }
 }
-type();
-var pageurl = window.location.href;
-if (pageurl=="http://127.0.0.1:5501/home.html"){
-    txt="Home Page";
-}
-else if(pageurl=="http://127.0.0.1:5501/aboutme.html"){
-    txt="About Me";
-}
-else if(pageurl=="http://127.0.0.1:5501/myprojects.html"){
-    txt="My Projects";
-}
-else if(pageurl=="http://127.0.0.1:5501/contacts.html"){
-    txt="Contacts";
-}
-function type(){
-    let i = 0;
-    const typeEffect = () => {
-      document.getElementById('type').innerHTML += txt.charAt(i);
-      i++;
-      if (i >= txt.length) {
-        return;
-      }
-      setTimeout(typeEffect, 100)
+export function type (txt='') {
+  let i = 0
+  const typeEffect = () => {
+    document.getElementById('type').innerHTML += txt.charAt(i)
+    i++
+    if (i >= txt.length) {
+      return
     }
-    setTimeout(typeEffect, 100)
+    setTimeout(typeEffect, 120)
+  }
+  setTimeout(typeEffect, 120)
 }
 var col = document.getElementsByClassName("collapsible");
 for (let i = 0; i < col.length; i++) {
@@ -79,5 +65,3 @@ for(let j = 0; j < Tags.length; j++){
         window.open(targs.getAttribute('hide-href'), "_blank");
   });
 }
-exports.default = series(scssTask,jsTask,browserSyncServe, watchTask);
-exports.build = series(scssTask,jsTask);
