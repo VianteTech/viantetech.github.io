@@ -9,9 +9,6 @@
 </head>
 <body class="fain">
     <header>
-        <label id="change" style="float:right">
-            <img class="fain" id="myf" src="pictures/dark mode.png" width="40">
-        </label>
         <h1 style="animation: fadeIn 1s ease 0s;">Welcome to my official website. :)</h1> 
         <br>
         <nav class="navbar fain"> 
@@ -33,7 +30,17 @@
                         </div>
                     </div> 
                 </li>
-            </ul>
+                <li>     
+                    <div class="dropdown clo navbar fain">
+                        <button class="dropbtn clo" style="position:absolute;left:2233">
+                            Theme <i class="fa-solid fa-caret-down" ></i>
+                        </button>
+                        <div class="dropdown-content" style="position:absolute;left:2223;top:145px">
+                          <a id="lighttheme">Light theme <i class="fa-solid fa-sun" style="color:var(--color) !important"> </i></a>
+                          <a id="darktheme">Dark theme <i class="fa-solid fa-moon" style="color:var(--color) !important"> </i></a>
+                        </div>
+                    </div> 
+                </li>
             </ul>
          </nav>       
     </header>
