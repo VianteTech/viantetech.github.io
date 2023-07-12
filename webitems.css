@@ -2,6 +2,9 @@
     --color: white;
     --background: black; 
 }
+#lighttheme, #darktheme{
+  cursor:pointer;
+}
 .dropdown {
   float: left;
   overflow: hidden;

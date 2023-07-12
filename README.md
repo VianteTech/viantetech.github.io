@@ -17,4 +17,6 @@ Hope you like my website :D.<br/>
 [Contacts](https://thuongdev.pages.dev/contacts)<br/>
 1 is hosted using github pages.<br/>
 2,3 are hosted using cloudflare.<br/>
+The website is under updating so it is only good on computers/laptops.<br/>
+About Phones, not very good.<br/> 
 Thanks for visiting my website.<br/>
