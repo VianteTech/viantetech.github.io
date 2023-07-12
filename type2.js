@@ -9,27 +9,18 @@ function displaytime(){
 }
 document.getElementById('change').onclick=function(){
     if (change==0 || save==0){
+        document.getElementById("myf").src = "pictures/light mode.png";
         r.style.setProperty('--color', 'black');
         r.style.setProperty('--background', 'white');
         change++;
         save=change;
     }
     else{
+        document.getElementById("myf").src = "pictures/dark mode.png";
         r.style.setProperty('--color', 'white');
         r.style.setProperty('--background', 'black');
         change--;
         save=change;
-    }
-}
-let i=1;
-document.getElementById('myf').onclick=function(){
-    if(i==1){
-    document.getElementById("myf").src = "pictures/light mode.png";
-    i=2;
-    }
-    else{
-    document.getElementById("myf").src = "pictures/dark mode.png";
-    i=1;
     }
 }
 export function type (txt='') {
