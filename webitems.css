@@ -10,6 +10,14 @@
   --color: white;
   --background: black; 
 }
+:root.royal{
+  --color:#ffe5b4;
+  --background: #00539C;
+}
+:root.fresh{
+  --color:#EDF5E1;
+  --background:#5CDB95;
+}
 #scheme{
   float: left;
   position: absolute;
