@@ -6,34 +6,7 @@
     <link rel="stylesheet" href="webitems.css" />
     <title>Dave/Viante: Home Page</title>
     <script src="https://kit.fontawesome.com/fda81483dd.js" crossorigin="anonymous"></script>
-    <script>
-        let prefersDark = matchMedia('(prefers-color-scheme: dark)');
-        prefersDark.addEventListener('change', event => loadTheme());
-    
-        function setTheme(theme) {
-          if (theme == 'auto') {
-            localStorage.removeItem('theme');
-            loadTheme(null);
-          } else {
-            localStorage.setItem('theme', theme);
-            applyTheme(theme);
-          }
-        }
-    
-        function loadTheme(theme) {
-          theme = localStorage.getItem('theme');
-          theme ??= (prefersDark.matches) ? 'dark' : 'default';
-          applyTheme(theme);
-        }
-    
-        function applyTheme(theme) {
-          document.documentElement.className = theme;
-        }
-    
-        window.setTheme = setTheme;
-    
-        loadTheme();
-    </script>
+    <script src="Uscript.js"></script>
 </head>
 <body class="fain">
     <header>
@@ -67,11 +40,7 @@
                             <option value="royal">Royal Theme</option>
                             <option value="fresh">Fresh Theme</option>
                     </select>
-                    <script>
-                            let selector = document.getElementById('scheme');
-                            selector.value = localStorage.getItem('theme') || 'auto';
-                            selector.addEventListener('click', event => window.setTheme(selector.value));
-                    </script>
+                    <script src="Dscript.js"></script>
                 </li>
             </ul>
          </nav>       
