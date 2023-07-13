@@ -10,7 +10,7 @@ Hope you like my website :D.<br/>
 [About Me](https://viantech.pages.dev/aboutme)<br/>
 [My Projects](https://viantech.pages.dev/myprojects)<br/>
 [Contacts](https://viantech.pages.dev/contacts)<br/>
-3.The links for my official website (viantech.pages.dev): (Updates/Connected to my Github)<br/>
+3.The links for my official website (thuongdev.pages.dev): (Updates/Connected to my Github)<br/>
 [Home Page](https://thuongdev.pages.dev/home)<br/>
 [About Me](https://thuongdev.pages.dev/aboutme)<br/>
 [My Projects](https://thuongdev.pages.dev/myprojects)<br/>
