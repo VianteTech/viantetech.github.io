@@ -6,6 +6,34 @@
     <link rel="stylesheet" href="webitems.css" />
     <title>This is my personal website</title>
     <script src="https://kit.fontawesome.com/fda81483dd.js" crossorigin="anonymous"></script>
+    <script>
+        let prefersDark = matchMedia('(prefers-color-scheme: dark)');
+        prefersDark.addEventListener('change', event => loadTheme());
+    
+        function setTheme(theme) {
+          if (theme == 'auto') {
+            localStorage.removeItem('theme');
+            loadTheme(null);
+          } else {
+            localStorage.setItem('theme', theme);
+            applyTheme(theme);
+          }
+        }
+    
+        function loadTheme(theme) {
+          theme = localStorage.getItem('theme');
+          theme ??= (prefersDark.matches) ? 'dark' : 'default';
+          applyTheme(theme);
+        }
+    
+        function applyTheme(theme) {
+          document.documentElement.className = theme;
+        }
+    
+        window.setTheme = setTheme;
+    
+        loadTheme();
+    </script>
 </head>
 <body class="fain">
     <header>
@@ -18,9 +46,9 @@
                 <li><a href="\myprojects.html">My Projects</a></li>
                 <li><a href="\contacts.html">Contacts</a></li>
                 <li>
-                    <div class="dropdown clo">
-                        <button class="dropbtn" style="position:absolute;right:0;">
-                            <i class="fa-solid fa-bars" ></i>
+                    <div class="dropdown clo navbar fain">
+                        <button class="dropbtn" style="position:absolute;right:0;margin-left: 820px !important; margin-top:0px">
+                            <i class="fa-solid fa-bars"></i>
                         </button>
                         <div class="dropdown-content clo" style="position:absolute;right:0;top:145px">
                           <a href="\home.html">Home</a>
@@ -31,15 +59,17 @@
                     </div> 
                 </li>
                 <li>     
-                    <div class="dropdown clo navbar fain">
-                        <button class="dropbtn clo" style="position:absolute;left:2233">
-                            Theme <i class="fa-solid fa-caret-down" ></i>
-                        </button>
-                        <div class="dropdown-content" style="position:absolute;left:2223;top:145px">
-                          <a id="lighttheme">Light theme <i class="fa-solid fa-sun" style="color:var(--color) !important"> </i></a>
-                          <a id="darktheme">Dark theme <i class="fa-solid fa-moon" style="color:var(--color) !important"> </i></a>
-                        </div>
-                    </div> 
+                    <select id="scheme" style="position:absolute;left:2233">
+                            <option value="auto">Auto</option>
+                            <option value="default">Default</option>
+                            <option value="light">Light Theme</option>
+                            <option value="dark">Dark Theme</option>
+                    </select>
+                    <script>
+                            let selector = document.getElementById('scheme');
+                            selector.value = localStorage.getItem('theme') || 'auto';
+                            selector.addEventListener('click', event => window.setTheme(selector.value));
+                    </script>
                 </li>
             </ul>
          </nav>       

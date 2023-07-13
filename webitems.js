@@ -1,37 +1,9 @@
-var r = document.querySelector(':root');
-let change=0;
-let save;
 window.onload = displaytime();
 function displaytime(){
   var time = new Date().toLocaleTimeString();
   document.getElementById("time").innerHTML = time;
   setTimeout(displaytime, 1000); 
 }
-document.getElementById('lighttheme').onclick=function(){
-  r.style.setProperty('--color', 'black');
-  r.style.setProperty('--background', 'white');
-}
-document.getElementById('darktheme').onclick=function(){
-  r.style.setProperty('--color', 'white');
-  r.style.setProperty('--background', 'black');
-}
-/*document.getElementById('change').onclick=function(){
-    if (change==0 || save==0){
-        //document.getElementById("myf").src = "pictures/light mode.png";
-        r.style.setProperty('--color', 'black');
-        r.style.setProperty('--background', 'white');
-        change++;
-        save=change;
-    }
-    else{
-        //document.getElementById("myf").src = "pictures/dark mode.png";
-        r.style.setProperty('--color', 'white');
-        r.style.setProperty('--background', 'black');
-        change--;
-        save=change;
-    }
-}
-*/
 export function type (txt='') {
   let i = 0
   const typeEffect = () => {

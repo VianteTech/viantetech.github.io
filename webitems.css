@@ -1,9 +1,23 @@
-:root{
-    --color: white;
-    --background: black; 
+:root.default{   
+  --color: white;
+  --background: black; 
 }
-#lighttheme, #darktheme{
-  cursor:pointer;
+:root.light{   
+  --color: black;
+  --background: white; 
+}
+:root.dark{   
+  --color: white;
+  --background: black; 
+}
+#scheme{
+  float: left;
+  position: absolute;
+  color:var(--background);
+  background-color:var(--color);
+  overflow: hidden;
+  clear:both;
+  margin-top: 15px;
 }
 .dropdown {
   float: left;
@@ -16,7 +30,7 @@
   outline: none;
   padding: 14px 16px;
   background-color: inherit;
-  margin: 0;
+  margin:0;
 }
 .dropdown-content {
   display: none;
