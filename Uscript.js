@@ -1,5 +1,5 @@
 let prefersDark = matchMedia('(prefers-color-scheme: dark)');
-    prefersDark.addEventListener('change', event => loadTheme());
+prefersDark.addEventListener('change', event => loadTheme());
 function setTheme(theme) {
     if (theme == 'auto'){
         localStorage.removeItem('theme');
