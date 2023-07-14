@@ -3,36 +3,52 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Not found">
-		<title>Not Found</title>
+        <link rel="stylesheet" href="webitems.css" />
+		<title></title>
+        <script src="https://kit.fontawesome.com/fda81483dd.js" crossorigin="anonymous"></script>
+        <script src="Uscript.js"></script>
 	</head>
 	<body>
-		<div>
-			<h1>404<br>Not Found</h1>
-		</div>
-        <style>
-        h1{
-            color: red;
-            left: 0;
-            margin-top: -100px;
-            position: absolute;
-            text-align: center;
-            top: 50%;
-            width: 100%;
-        }
-        </style>
-        <div>
-            Click on this link to redirect you to my website :D.<br>
-            <a target="_blank" href="https://viantetech.github.io/">Website Page (ReadMe)</a>
-        </div>
-        <div style="text-align: center">
-            <h2 id="click">Seems like you're looking for something <a href="https://bit.ly/viantetechdev" target="_blank">...</a> </h2>
-            <h2 id="html1"></h2>
+        <header>
+            <select id="scheme" style="position:absolute;right:0;margin-right:0">
+                <option value="auto">Auto</option>
+                <option value="default">Default</option>
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+                <option value="royal">Royal Theme</option>
+                <option value="fresh">Fresh Theme</option>
+            </select>
+            <script src="Dscript.js"></script>
+        </header>
+        <main>
+            <h2>Hello There My Friend.<br>It's great to see you here.</h2>
+            <h3>Because you are here. :)</h3>
+            <p>
+                My current views of my published website:<br>
+                Well, it's my second project so I have a lot of thoughts.<br>
+                First: It marked my hard and long time of learning Javascript/HTML/CSS.<br>
+                Second:<br> 
+                -I want to use PHP in my websites, but I use Javascript the most so I decided to not use PHP.<br>
+                -I have learned .Net(C#) and Django(Python) but I just use the basics for my website :).<br>
+                Third:<br>
+                I would like to thank you all for visiting my website :D.<br>
+            </p>
+            <p>Click this -><a href="https://viantetech.github.io">Click Me</a><- to see the full README of my website.</p>
+            <p>Once again, thanks for visiting my website. :) (OwO)</p>
+        </main>
+        <footer>
+            <hr>
+            <p class="fain" style="text-align: center;"><b>Author: Dave/Viante.<br>
+            &copy; Copyright Reserved: 2023 (Dave/Viante) | Built with HTML, CSS, Javascript.<br>
+            Current Time: <label id="time"></label></b></p>
             <script>
-                document.getElementById('click').onclick=function(){
-                    document.getElementById('html1').innerHTML="You got rickrolled by me :). I'm sorry for that though it is too late.";
+                window.onload = displaytime();
+                function displaytime(){
+                var time = new Date().toLocaleTimeString();
+                document.getElementById("time").innerHTML = time;
+                setTimeout(displaytime, 1000); 
                 }
             </script>
-        </div>
+        </footer>
 	</body>
 </html>
