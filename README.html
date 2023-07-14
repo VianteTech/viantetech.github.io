@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="webitems.css" />
+		<title>README.md</title>
+        <script src="https://kit.fontawesome.com/fda81483dd.js" crossorigin="anonymous"></script>
+        <script src="Uscript.js"></script>
+	</head>
+	<body>
+        <header>
+            <select id="scheme" style="position:absolute;right:0;margin-right:0">
+                <option value="auto">Auto</option>
+                <option value="default">Default</option>
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+                <option value="royal">Royal Theme</option>
+                <option value="fresh">Fresh Theme</option>
+            </select>
+            <script src="Dscript.js"></script>
+        </header>
+        <main>
+            <p>
+                This is my official website that I'll be working on for my personal stuffs.<br>
+                Hope you like my website :D.<br>
+                1.The links for my official website (github.io): (Updates)<br>
+                <a href="https://viantetech.github.io/home">Home Page</a><br>
+                <a href="https://viantetech.github.io/aboutme">About Me</a><br>
+                <a href="https://viantetech.github.io/myprojects">My Projects</a><br>
+                <a href="https://viantetech.github.io/contacts">Contacts</a><br>
+                2.The links for my unofficial website (viantech.pages.dev): (No updates/A glimpse of my second project)<br>
+                <a href="https://viantech.pages.dev/home">Home Page</a><br>
+                <a href="https://viantech.pages.dev/aboutme">About Me</a><br>
+                <a href="https://viantech.pages.dev/myprojects">My Projects</a><br>
+                <a href="https://viantech.pages.dev/contacts">Contacts</a><br>
+                3.The links for my official website (thuongdev.pages.dev): (Updates/Connected to my Github)<br>
+                <a href="https://thuongdev.pages.dev/home">Home Page</a><br>
+                <a href="https://thuongdev.pages.dev/aboutme">About Me</a><br>
+                <a href="https://thuongdev.pages.dev/myprojects">My Projects</a><br>
+                <a href="https://thuongdev.pages.dev/contacts">Contacts</a><br>
+                1 is hosted using github pages.<br>
+                2,3 are hosted using cloudflare.<br>
+                If you're using a phone to change the color theme on my website:<br>
+                Click on the select bar.<br>
+                Choose the color theme you like.<br>
+                Click on the select bar again.<br>
+                (The color theme will change) Click outside the select bar.<br>
+                Voila! But I'm sorry if that is not very convenient, I'm looking forward to improving my website :)<br>
+            </p>
+            <p>Thanks for visiting my website and reading my README.md. :) (OwO)</p>
+        </main>
+        <footer>
+            <hr>
+            <p class="fain" style="text-align: center;"><b>Author: Dave/Viante.<br>
+            &copy; Copyright Reserved: 2023 (Dave/Viante) | Built with HTML, CSS, Javascript.<br>
+            Current Time: <label id="time"></label></b></p>
+            <script>
+                window.onload = displaytime();
+                function displaytime(){
+                var time = new Date().toLocaleTimeString();
+                document.getElementById("time").innerHTML = time;
+                setTimeout(displaytime, 1000); 
+                }
+            </script>
+        </footer>
+	</body>
+</html>
