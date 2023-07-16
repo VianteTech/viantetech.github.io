@@ -1,6 +1,7 @@
 let tar=window.location.href;
 tar = tar.replace(/%20/g, "");
 tar = tar.toLowerCase();
+console.log(tar);
 if (tar.includes("aboutme")){
     switch(tar){
         case tar.includes("https://viantetech.github.io"):
