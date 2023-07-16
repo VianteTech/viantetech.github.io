@@ -58,18 +58,70 @@
             Have a good day with your family, friends and relatives, my friend!
         </p>
         <h2>Intro (Summary):</h2>
-        <p>
+        <p id="hello1">
             Hello. I'm Dave/Viante. I'm a full stack developer with a dream and lots of goals.<br>
             I'm interested in web developement, math, languages,... and coding. They're the best :).<br>
             I'm looking forward to improving myself and learning good and new things from the world.<br>
         </p>
+        <script>
+            let userLang = navigator.language || navigator.userLanguage; 
+            if(userLang=="vi"){
+            document.getElementById("hello1").innerHTML=
+            `
+            Xin chào bạn, lại gặp lần nữa rồi :D.<br>
+            Bạn hãy bấm vào nút trên thanh điều hướng để biết thêm: <br>
+            Home: Trang chủ (bạn đang ở trang này).<br>
+            About me: Về mình :).<br>
+            My Projects: Những dự án của mình và những thay đổi trên website.<br>
+            Contacts: Thông tin liên hệ của mình (từ từ mình cập nhật).<br>
+            Bạn kéo xuống cuối cùng sẽ thấy thời gian hiện tại (Current Time).<br>
+            Và google dịch (dùng để dịch trang), bạn chọn ngôn ngữ nào cũng được :D.<br>
+            Còn nữa, 3 thanh ngang bên phải màn hình hiển thị những gì trên thanh điều hướng.<br>
+            (trừ lựa chọn thay đổi nền màu và chữ).<br>
+            Còn thanh lựa chọn màn hình nền thì có 6 lựa chọn:<br>
+            Auto và default: Mặc định là nền đen chữ trắng.<br>
+            Light theme: Nền trắng chữ đen.<br>
+            Dark theme: Nề đen chữ trắng. (Bảo vệ mắt).<br>
+            Royal theme: màu nền và chữ theo kiểu trend.<br>
+            Fresh theme: màu nền và chữ theo kiểu tươi sáng.<br>
+            Cảm ơn bạn đã xem website của mình. :)
+            `
+            ;
+            }
+            else{
+            document.getElementById("hello1").innerHTML+=
+            `
+            Please click the button on the navigation bar to know more: <br>
+            Home: Home page (you are on this page right now).<br>
+            About me: About me and everything (not really) :).<br>
+            My Projects: My projects and the changes on my website.<br>
+            Contacts: My contact information (I will update in the future (no promises)).<br>
+            You scroll down to the end to see the current time (Current Time).<br>
+            And google translate bar (to translate pages) :D.<br>
+            Also, the 3 horizontal bars on the right side of the screen show what's on the navigation bar.<br>
+            (except for the selection bar to change the theme).<br>
+            As for the theme selection bar, there are 6 options:<br>
+            Auto and default: Default is black background with white text.<br>
+            Light theme: White background with black text.<br>
+            Dark theme: Black background with white text.<br>
+            Royal theme: background color and text in a royal style (Not really).<br>
+            Fresh theme: background color and text in a fresh style.<br>
+            Thank you for visiting my website. :)
+            `
+            }
+        </script>
     </main>
     <footer>
         <hr>
         <p class="fain" style="text-align: center;"><b>Author: <label id="101">Dave/Viante</label>.<br>
         &copy; Copyright Reserved: 2023 <label id="102">(Dave/Viante)</label> | Built with HTML, CSS, Javascript.<br>
         Current Time: <label id="time"></label></b></p>
-        <script src="langech.js"></script>
+        <script>
+            if(userLang=="vi"){
+                document.getElementById("101").innerHTML="Cao Xuân Thưởng";
+                document.getElementById("102").innerHTML="(Cao Xuân Thưởng)";
+            }
+        </script>
     </footer>
     <script src="webitems.js"></script>
     <div id="googletranslate"></div>
