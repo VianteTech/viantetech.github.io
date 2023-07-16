@@ -23,7 +23,7 @@
         <main>
             <br>
             <br>
-            <p>
+            <p id="hello">
                 This is my official website that I'll be working on for my personal stuffs.<br>
                 Hope you like my website :D.<br>
                 1.The links for my official website (github.io): (Updates)<br>
@@ -51,12 +51,27 @@
                 Voila! But I'm sorry if that is not very convenient, I'm looking forward to improving my website :)<br>
             </p>
             <p>Thanks for visiting my website and reading my README.md. :) (OwO)</p>
+            <script>
+                let userLang = navigator.language || navigator.userLanguage; 
+                if(userLang=="vi"){
+                document.getElementById("hello").innerHTML+=
+                `
+                Xin chào bạn, mình lại gặp bạn rồi.<br>
+                <b>Mình chúc bạn một ngày tốt lành. :)</b><br>
+                `
+                ;
+                }
+                else{
+
+                }
+            </script>
         </main>
         <footer>
             <hr>
-            <p class="fain" style="text-align: center;"><b>Author: Dave/Viante.<br>
-            &copy; Copyright Reserved: 2023 (Dave/Viante) | Built with HTML, CSS, Javascript.<br>
+            <p class="fain" style="text-align: center;"><b>Author: <label id="101">Dave/Viante</label>.<br>
+            &copy; Copyright Reserved: 2023 <label id="102">(Dave/Viante)</label> | Built with HTML, CSS, Javascript.<br>
             Current Time: <label id="time"></label></b></p>
+            <script src="langech.js"></script>
             <script>
                 window.onload = displaytime();
                 function displaytime(){
