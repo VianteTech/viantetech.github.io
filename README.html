@@ -71,7 +71,12 @@
             <p class="fain" style="text-align: center;"><b>Author: <label id="101">Dave/Viante</label>.<br>
             &copy; Copyright Reserved: 2023 <label id="102">(Dave/Viante)</label> | Built with HTML, CSS, Javascript.<br>
             Current Time: <label id="time"></label></b></p>
-            <script src="langech.js"></script>
+            <script>
+                if(userLang=="vi"){
+                    document.getElementById("101").innerHTML="Cao Xuân Thưởng";
+                    document.getElementById("102").innerHTML="(Cao Xuân Thưởng)";
+                }
+            </script>
             <script>
                 window.onload = displaytime();
                 function displaytime(){
