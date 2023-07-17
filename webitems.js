@@ -1,8 +1,12 @@
-window.onload = displaytime();
-function displaytime(){
-  var time = new Date().toLocaleTimeString();
-  document.getElementById("time").innerHTML = time;
-  setTimeout(displaytime, 1000); 
+window.onload=LoadLang()
+function LoadLang(){
+  let userLang = navigator.language || navigator.userLanguage; 
+  if(userLang=="vi"){
+      localStorage.setItem("Lang","vi")
+  }
+  else{
+      localStorage.setItem("Lang",userLang)
+  }
 }
 export function type (txt='') {
   let i = 0

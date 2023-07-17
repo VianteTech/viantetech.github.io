@@ -90,8 +90,26 @@
         <p class="fain" style="text-align: center;"><b>Author: <label id="101">Dave/Viante</label>.<br>
         &copy; Copyright Reserved: 2023 <label id="102">(Dave/Viante)</label> | Built with HTML, CSS, Javascript.<br>
         Current Time: <label id="time"></label></b></p>
-        <script src="langech.js"></script>
     </footer>
+    <script type="text/javascript">
+        //Display time
+        window.onload=displaytime()
+        function displaytime(){
+            var time = new Date().toLocaleTimeString();
+            document.getElementById("time").innerHTML = time;
+            setTimeout(displaytime, 1000); 
+        }
+        //Get the current language from the storage and change the elements.
+        window.onload=Getlang()
+        function Getlang(){
+            let Currentlang=localStorage.getItem("Lang")
+            if( Currentlang==="vi"){
+                document.getElementById("101").innerHTML="Cao Xuân Thưởng";
+                document.getElementById("102").innerHTML="(Cao Xuân Thưởng)";
+                
+            }
+        }    
+    </script>
     <script src="webitems.js"></script>
     <div id="googletranslate"></div>
     <script type="text/javascript">

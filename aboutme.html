@@ -16,7 +16,18 @@
         <nav class="navbar fain">
             <ul>
                 <li><a href="\home.html">Home</a></li>
-                <li><a href="\aboutme.html">About Me</a></li>
+                <li>
+                    <div class="dropdown clo navbar fain">
+                    <a class="dropbtn" href="\aboutme.html">About Me</a>
+                    <div class="dropdown-content clo" style="position:absolute;left:0;margin-left:70px;margin-top:1px">
+                        <a href="#intro">Intro</a>
+                        <a href="#hobbies">Hobbies</a>
+                        <a href="#animals">Animals</a>
+                        <a href="#subjects">Subjects</a>
+                        <a href="#faqs">FAQs (Online)</a>
+                    </div>
+                    </div>
+                </li>
                 <li><a href="\myprojects.html">My Projects</a></li>
                 <li><a href="\contacts.html">Contacts</a></li>
                 <li>
@@ -53,8 +64,8 @@
             type('About Me');
         </script>
         <div>
-            <label><label style="font-size: 180%;color:blue"><b>This is <label id="103">Dave/Viante</label></b></label><b> [ Any Pronouns ] </b></label>
-            <p id="104">Hola! I'm a full stack developer, a 
+            <label><label style="font-size: 180%;color:blue"><b>This is <label id="101">Dave/Viante</label></b></label><b> [ Any Pronouns ] </b></label>
+            <p id="Asum">Hola! I'm a full stack developer, a 
                 <span hide-href="https://www.canva.com/">Canva</span>
                  designer and your discord friendly user "Davey Wavey: everyone calls me by that name is because I'm nice :)."
             </p>
@@ -71,7 +82,7 @@
         <div>
             <h2 style="text-align: center;">Interests Category</h2>
             <div>
-                <h3>
+                <h3 id="hobbies">
                     Hobbies: Most are interesting, most are ...Um you know that :).
                 </h3>
                 <button class="collapsible clo" style="text-align: left;">Reading books:</button>
@@ -116,7 +127,7 @@
                         Which makes watching cartoons my hobby at the weekends.
                     </p>
                 </div>
-                <h3>
+                <h3 id="animals">
                     Animals/Mythical Animals:
                 </h3>
                 <button class="collapsible clo" style="text-align: left;">Birds (birbs)</button>
@@ -193,7 +204,7 @@
                         And one last time, it's a real link, not a rickroll or a scam :).
                     </p>
                 </div>
-                <h3>
+                <h3 id="subjects">
                     Subjects: 
                 </h3>
                 <button class="collapsible clo" style="text-align: left;">Information Technology:</button>
@@ -249,14 +260,14 @@
             </div>
         </div>
         <div>
-            <h2>Frequently Asked Questions (Online):</h2>
+            <h2 id="faqs">Frequently Asked Questions (Online):</h2>
         </div>
         <button class="collapsible clo" style="text-align: left;">Why is my nickname called Viante?</button>
         <div class="content">
             <p>Well, my nickname comes from my fanfic while I was writting it. ( The fanfic's name is The Owl House Season 4: The Reality's Verge or Starlight if you wonder )<br>
                The name "Viante" is a compound name of Vian Nate Dave(s) ( My nickname ) with the surname Amistad that stands for Friendship :).<br>
-               Which makes the name Amistad Viante more meaningful and a great name.<br>
-               About the nickname "Davey Wavey" if you're wondering. It's what my friends called me :).
+               Which makes the nickname Amistad Viante more meaningful and a great nickname as well.<br>
+               About the nickname "Davey Wavey" if you're wondering. It's what my friends called me when I'm on Discord :).
             </p>
         </div>
         <button class="collapsible clo" style="text-align: left;">What are your goals, Dave/Viante?</button>
@@ -315,8 +326,29 @@
         <p class="fain" style="text-align: center;"><b>Author: <label id="101">Dave/Viante</label>.<br>
         &copy; Copyright Reserved: 2023 <label id="102">(Dave/Viante)</label> | Built with HTML, CSS, Javascript.<br>
         Current Time: <label id="time"></label></b></p>
-        <script src="langech.js"></script>
     </footer>
+    <script type="text/javascript">
+        //Display time
+        window.onload=displaytime()
+        function displaytime(){
+            var time = new Date().toLocaleTimeString();
+            document.getElementById("time").innerHTML = time;
+            setTimeout(displaytime, 1000); 
+        }
+        //Get the current language from the storage and change the elements.
+        window.onload=Getlang()
+        function Getlang(){
+            let Currentlang=localStorage.getItem("Lang")
+            if( Currentlang==="vi"){
+                document.getElementById("101").innerHTML="Cao Xuân Thưởng";
+                document.getElementById("102").innerHTML="(Cao Xuân Thưởng)";
+                document.getElementById("Asum").innerHTML=
+                `Xìn chào bạn! Mình là một học sinh có niềm đam mê với lập trình (tin học), toán học, văn học và tiếng anh.
+                <br>Đây là trang chính thức giới thiệu về bản thân mình và là động lực giúp mình luyện tập kĩ năng lập trình.`;
+                
+            }
+        }    
+    </script>
     <script src="webitems.js"></script>
     <div id="googletranslate"></div>
     <script type="text/javascript">

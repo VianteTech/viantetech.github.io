@@ -6,13 +6,58 @@
         <meta name="description" content="Rickroll">
         <title>Rick Roll</title>
 	</head>
-	<body>
-        <script>
-            myFunction();
-            function myFunction() {
-              location.replace("https://my-cool-app.com");
-              //Credit to discord :). Thanks Discord.
+	<body style="background-color: black;">
+        <p style="color:white">Click(s): <label id="change"></label></p>
+        <script>   
+          RRclick();
+          function RRclick() {
+            if (localStorage.ccount) {
+              localStorage.ccount = Number(localStorage.ccount)+1;
+              if(localStorage.ccount >=5 ){
+                localStorage.ccount= 0;
+                location.replace("https://my-cool-app.com")
+                //Credit to discord. Thanks discord.
+              }
+            } 
+            else {
+              localStorage.ccount = 1;
             }
+            document.getElementById("change").innerHTML=localStorage.ccount;
+          }
         </script>
+        <p style="color:white">
+          Terminal:
+        </p>
+        <label style="color:white;vertical-align:top;position: absolute;left:0;margin-left: 245px;margin-top: -40px;">Output<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓
+        </label>
+        <textarea placeholder="Hello my friend, this is your own terminal.   Look below to see the available commands. Have fun, my friend!" style="background-color: black; color:white" rows="5"></textarea>
+        <textarea placeholder="This is the output of the terminal :)/:D." style="background-color: black; color:white" rows="5"></textarea>
+        <input placeholder="Please type a command..." id="input">
+        <label style="color:white;position: absolute;right:left;margin-left: 230px;margin-top: -20px;">←&nbspInput</label>
+        <style>
+          #input{
+            outline:white;
+            display: table;
+            background-color: black;
+            color:white
+          }
+          ::placeholder{
+            color:blue;
+          }
+        </style>
+        <p style="color:white">
+        Terminal guide:<br>
+        Commands:<br>
+        Help: Shows the output of all commands.<br>
+        Joke: Tells you a joke.<br>
+        Motivation: Gives you a motivation.<br>
+        Date: Gives you the current date.<br>
+        Time: Gives you the current time.<br>
+        Calculator: Solves math equations.<br>
+        RR: Redirects you to RR.<br>
+        Ask: Asks you a random question.<br>
+        !Calculator: Opens your calculator (windows only)<br>
+        
 	</body>
+  <script>//href=calculator: URL</script>
 </html>
