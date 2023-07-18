@@ -8,6 +8,20 @@ function LoadLang(){
       localStorage.setItem("Lang",userLang)
   }
 }
+window.onload=LoadDevice()
+function LoadDevice(){
+  let details = navigator.userAgent;
+  let regexp = /android|iphone|kindle|ipad/i;
+  let isMobileDevice = regexp.test(details);
+  if (isMobileDevice) {
+      localStorage.setItem("Device","Mobile")
+      console.log("You're using a Mobile Device now.")
+  } 
+  else {
+      localStorage.setItem('Device',"Desktop")
+      console.log("You're using a Desktop/Laptop/PC now.")
+  }
+}
 export function type (txt='') {
   let i = 0
   const typeEffect = () => {
