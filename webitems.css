@@ -18,6 +18,50 @@
   --color:#EDF5E1;
   --background:#5CDB95;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.popup-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color:black;
+  text-decoration: none;
+  font-size: 30px; 
+  margin-right:20px;
+}
+.popup-close:hover{
+  color:red;
+}
+#movet {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+}
+#movetheader {
+  padding: 10px;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+  cursor: move;
+}
+.popup{
+  width: 500px;
+  height: 400px;
+  position: fixed;
+  color: black;
+  background: white;
+  z-index: 1;
+  overflow:auto;
+  visibility: hidden;
+}
+.popup:target{
+  visibility: visible;
+  opacity: 1;
+}
 #scheme{
   float: left;
   position: absolute;

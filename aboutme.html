@@ -13,23 +13,24 @@
     <header>
         <h1 style="animation: fadeIn 1s ease 0s;">Welcome to my official website. :)</h1> 
         <br>
-        <nav class="navbar fain">
+        <nav id="navbar" class="navbar fain">
             <ul>
                 <li><a href="\home.html">Home</a></li>
                 <li>
                     <div class="dropdown clo navbar fain">
-                    <a class="dropbtn" href="\aboutme.html">About Me</a>
-                    <div class="dropdown-content clo" style="position:absolute;left:0;margin-left:70px;margin-top:1px">
-                        <a href="#intro">Intro</a>
-                        <a href="#hobbies">Hobbies</a>
-                        <a href="#animals">Animals</a>
-                        <a href="#subjects">Subjects</a>
-                        <a href="#faqs">FAQs (Online)</a>
-                    </div>
+                        <a class="dropbtn" href="\aboutme.html">About Me</a>
+                        <div class="dropdown-content clo" style="position:absolute;left:0;margin-left:70px;margin-top:1px">
+                            <a href="#intro">Intro</a>
+                            <a href="#hobbies">Hobbies</a>
+                            <a href="#animals">Animals</a>
+                            <a href="#subjects">Subjects</a>
+                            <a href="#faqs">FAQs (Online)</a>
+                        </div>
                     </div>
                 </li>
                 <li><a href="\myprojects.html">My Projects</a></li>
                 <li><a href="\contacts.html">Contacts</a></li>
+                <li><a href="#movet">Settings</a></li>
                 <li>
                     <div class="dropdown clo navbar fain">
                         <button class="dropbtn" style="position:absolute;right:0;margin-left: 820px !important; margin-top:0px">
@@ -40,6 +41,7 @@
                           <a href="\aboutme.html">About Me</a>
                           <a href="\myprojects.html">My Projects</a>
                           <a href="\contacts.html">Contacts</a>
+                          <a href="#movet">Settings</a>
                         </div>
                     </div> 
                 </li>
@@ -55,7 +57,92 @@
                     <script src="Dscript.js"></script>
                 </li>
             </ul>
-         </nav>       
+         </nav>      
+         <script>
+            window.onscroll = function() {myFunction()};
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+
+            function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            }
+         </script>
+         <div id="movet" class="popup">
+            <div id="movetheader">
+                Settings:
+                <a href=""
+                class="popup-close">
+                 ×
+                </a>
+            </div>
+            <h2 style="text-align: center;">Settings <i class="fa-solid fa-gear"></i></h2>
+            <p>Choose Your Theme:<br>
+                <label for="Auto">Auto:</label>
+                <input checked type="radio" value="auto" id ="Auto" name="option"><br>
+                <label for="Default">Default:</label>
+                <input type="radio" value="default" id ="Default" name="option"><br>
+                <label for="Light Theme">Light Theme:</label>
+                <input type="radio" value="light" id ="Light Theme" name="option"><br>
+                <label for="Dark Theme">Dark Theme:</label>
+                <input type="radio" value="dark" id ="Dark Theme" name="option"><br>
+                <label for="Royal Theme">Royal Theme:</label>
+                <input type="radio" value="royal" id ="Royal Theme" name="option"><br>
+                <label for="Fresh Theme">Fresh Theme:</label>
+                <input type="radio" value="fresh" id ="Fresh Theme" name="option"><br>
+            </p>
+            <h3>Terminal Access only:
+                <label for="Yes">Yes</label>
+                <input type="radio" value="yes" id ="Yes" name="option1">
+                <label for="No">No</label>
+                <input checked type="radio" value="no" id = "No" name="option1">
+            </h3>
+            <h3>Enabled Supreme mode:
+                <label for="Yes">Yes</label>
+                <input type="radio" value="yes" id ="Yes" name="options">
+                <label for="No">No</label>
+                <input checked type="radio" value="no" id = "No" name="options">
+            </h3>
+            <script type="text/javascript">
+                window.onload=dragElement(document.getElementById("movet"));
+                function dragElement(elmnt) {
+                var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+                if (document.getElementById(elmnt.id + "header")) {
+                    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+                } else {
+                    elmnt.onmousedown = dragMouseDown;
+                }
+
+                function dragMouseDown(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    document.onmouseup = closeDragElement;
+                    document.onmousemove = elementDrag;
+                }
+
+                function elementDrag(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    pos1 = pos3 - e.clientX;
+                    pos2 = pos4 - e.clientY;
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+                }
+
+                function closeDragElement() {
+                    document.onmouseup = null;
+                    document.onmousemove = null;
+                }
+                }
+            </script>
+        </div>    
     </header>
     <main>  
         <h2 class="page" id="type"></h2>
@@ -323,7 +410,7 @@
     </main>
     <footer>
         <hr>
-        <p class="fain" style="text-align: center;"><b>Author: <label id="101">Dave/Viante</label>.<br>
+        <p class="fain" style="text-align: center;"><b>Author: <label id="103">Dave/Viante</label>.<br>
         &copy; Copyright Reserved: 2023 <label id="102">(Dave/Viante)</label> | Built with HTML, CSS, Javascript.<br>
         Current Time: <label id="time"></label></b></p>
     </footer>
@@ -342,6 +429,7 @@
             if( Currentlang==="vi"){
                 document.getElementById("101").innerHTML="Cao Xuân Thưởng";
                 document.getElementById("102").innerHTML="(Cao Xuân Thưởng)";
+                document.getElementById("103").innerHTML="Cao Xuân Thưởng";
                 document.getElementById("Asum").innerHTML=
                 `Xìn chào bạn! Mình là một học sinh có niềm đam mê với lập trình (tin học), toán học, văn học và tiếng anh.
                 <br>Đây là trang chính thức giới thiệu về bản thân mình và là động lực giúp mình luyện tập kĩ năng lập trình.`;
