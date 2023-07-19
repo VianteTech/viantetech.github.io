@@ -10,23 +10,149 @@
     <script src="Uscript.js"></script>
 </head>
 <body style="background-color: var(--background); color: var(--color);">
-    <select id="scheme" style="position:absolute;margin-right:0;right:0">
-        <option value="auto">Auto</option>
-        <option value="default">Default</option>
-        <option value="light">Light Theme</option>
-        <option value="dark">Dark Theme</option>
-        <option value="royal">Royal Theme</option>
-        <option value="fresh">Fresh Theme</option>
-    </select>
-    <h2 style="text-align: center">Settings <i class="fa-solid fa-gear"></i></h2>
+    <h2 style="text-align: center"><label class="page" id="type"></label> <i class="fa-solid fa-gear"></i></h2>
+    <script type="module">           
+    import { type } from './webitems.js';
+    type('Settings');
+    </script>
     <h3>
     Hey there my friend!<br>
     Welcome to settings, where you can set anything you want.<br>
     But remember to choose the right one.<br>
     And most importantly, have a nice day! :D<br>
     </h3>
+    <p style="font-size: larger;">Themes:<br>
+        <select id="scheme" style="position:absolute;margin-left:0;left:0">
+            <option value="auto">Auto</option>
+            <option value="default">Default</option>
+            <option value="light">Light Theme</option>
+            <option value="dark">Dark Theme</option>
+            <option value="royal">Royal Theme</option>
+            <option value="fresh">Fresh Theme</option>
+        </select>
+        <br>
+    </p>
+    <h3>Terminal Access only: <br>
+        <label for="Yes">Yes</label>
+        <input type="radio" value="yes" id ="Yes" name="option1">
+        <label for="No">No</label>
+        <input checked type="radio" value="no" id = "No" name="option1">
+    </h3>
+    <h3>Enable <label id="s">Supreme</label> mode: <br>
+        <label for="Yes">Yes</label>
+        <input type="radio" value="yes" id ="Yes" name="options">
+        <label for="No">No</label>
+        <input checked type="radio" value="no" id = "No" name="options">
+    </h3>
+    <p style="font-size:larger">Comments & Thoughts:</p>
+    <textarea readonly cols="50">If you enjoy figuring out new things, be sure to write your own thoughts about my website so that I'll improve it. See you, my friend!</textarea>
+    <br>
+    <textarea rows="10" cols="50" placeholder="Write your thoughts here, my friend :D. Don't worry, I remove the scroll for some fun! Haha."></textarea>
+    <br>
+    <button>Submit your thoughts</button>
+    <p style="font-size: larger;">Click one of the following to redirect to one of my website's pages:</p>
+    <a href="/shop.html">My Shop (It's where you can expect...)</a><br>
+    <a href="/index.html">First Page (Index)</a><br>
+    <a href="/home.html">Home Page</a><br>
+    <a href="/aboutme.html">About Me</a><br>
+    <a href="/myprojects.html">My Projects</a><br>
+    <a href="/contacts.html">Contacts</a><br>
+    <a style="color:orange">Settings <i class="fa-solid fa-gear"></i> <- You're here :).</a><br>
+    <a href="/README.html">README.md</a><br>
+    <a href="#" id="secret">Nothing To See</a><br>
+    <a href="/404.html">Error (Not Found)</a><br>
+    <a href="/rickroll.html">Rick Roll of course (My views are my own - quote)</a><br>
+    <style>
+    a:link {
+        clear:both;
+        color:blue !important;
+        background-color: transparent;
+    }
+    a:visited {
+        clear:both;
+        background-color: transparent;
+    }
+    a:hover {
+        clear:both;
+        color: var(--color);
+        background-color: transparent;
+    }
+    a:active {
+        clear:both;
+        background-color: transparent;
+    }    
+    textarea {
+        display:table;
+        background-color: var(--background);
+        color: var(--color);
+        border: none;
+        overflow: auto;
+        outline: none;
+        font-size: larger;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    button{
+        color: var(--color);
+        background-color: var(--background);
+        border-radius: 20px;
+        border-color: var(--color); 
+        margin:0px;
+        right:0;
+    }
+    </style>
     <script src="Dscript.js"></script>
     <script type="text/javascript">
+        document.getElementById("s").onclick=function(){
+            alert(`It's "Enable Sus Mode" if you don't know :).\nDon't believe the settings, it's a lie.`)
+        }
+        document.getElementById("secret").onclick=function(){
+            alert("Shhh, I know this is suspicious.\nI'll ask you a question, click OK.\nThanks my friend.")
+            let answer= window.prompt("Promise me that you won't tell anyone about this, my friend :).\nJust pretend it isn't here.\nWill you promise me?");
+            if(answer.toLowerCase()==null){
+                alert("Guess I'm a bit sad, but that's okday :).")
+            }
+            else{
+                answer=answer.toLowerCase()
+                let tar=window.location.href;
+                if(answer=="yes"||answer=="ye"||answer=="y"||answer=="yeah"){
+                    alert("Thanks for the promising, now I'll redirect you to the ...");
+                    if(tar.includes("https://viantetech.github.io")){
+                        window.location.replace("https://viantetech.github.io/secret");
+                    }
+                    else if(tar.includes("https://thuongdev.pages.dev")){ 
+                        window.location.replace("https://thuongdev.pages.dev/secret");
+                    }
+                }
+                else{
+                    alert("Guess I'm a bit sad, but that's okday :).")
+                }
+            }
+        }
     </script>
+    <hr>
+    <p class="fain" style="text-align: center;"><b>Author: <label id="101">Dave/Viante</label>.<br>
+    &copy; Copyright Reserved: 2023 <label id="102">(Dave/Viante)</label> | Built with HTML, CSS, Javascript.<br>
+    Current Time: <label id="time"></label></b></p>
+    <script type="text/javascript">
+        //Display time
+        window.onload=displaytime()
+        function displaytime(){
+            var time = new Date().toLocaleTimeString();
+            document.getElementById("time").innerHTML = time;
+            setTimeout(displaytime, 1000); 
+        }
+        //Get the current language from the storage and change the elements.
+        window.onload=Getlang()
+        function Getlang(){
+            let Currentlang=localStorage.getItem("Lang")
+            if( Currentlang==="vi"){
+                document.getElementById("101").innerHTML="Cao Xuân Thưởng";
+                document.getElementById("102").innerHTML="(Cao Xuân Thưởng)";
+            }
+        }    
+    </script>
+    <script src="webitems.js"></script>
 </body>
 </html>
