@@ -13,9 +13,31 @@
     <header>
         <h1 style="animation: fadeIn 1s ease 0s;">Welcome to my official website. :)</h1> 
         <br>
+        <div id="navigation" class="topnav">
+            <a class="active" style="color: white !important;">Home Page</a>
+            <div id="links">
+              <a href="/aboutme.html">About Me</a>
+              <a href="/myprojects.html">My Projects</a>
+              <a href="/contacts.html">Contacts</a>
+            </div>
+            <a class="icon" onclick="myFunction()">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </div>
+        <script type="text/javascript">
+            function myFunction() {
+            var x = document.getElementById("links");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } 
+            else {
+                x.style.display = "block";
+            }
+            }
+        </script>
         <nav id="navbar" class="navbar fain">
             <ul>
-                <li><a href="\home.html">Home</a></li>
+                <li><a class="active">Home</a></li>
                 <li><a href="\aboutme.html">About Me</a></li>
                 <li><a href="\myprojects.html">My Projects</a></li>
                 <li><a href="\contacts.html">Contacts</a></li>
@@ -26,7 +48,7 @@
                             <i class="fa-solid fa-bars"></i>
                         </button>
                         <div class="dropdown-content clo" style="position:absolute;right:0;margin-top:47px">
-                          <a href="\home.html">Home</a>
+                          <a class="active">Home</a>
                           <a href="\aboutme.html">About Me</a>
                           <a href="\myprojects.html">My Projects</a>
                           <a href="\contacts.html">Contacts</a>
@@ -47,17 +69,40 @@
                 </li>
             </ul>
          </nav>    
-         <script>
-            window.onscroll = function() {myFunction()};
-            var navbar = document.getElementById("navbar");
-            var sticky = navbar.offsetTop;
-
-            function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
+         <script type="text/javascript">
+            window.onload = getDevice()
+            function getDevice(){
+                let currentDevice=localStorage.getItem("Device")
+                if(currentDevice==="Mobile"){
+                    var element = document.getElementsByClassName('mobi');
+                    for(let i=0;i<element.length;i++){
+                        link=element[i].href;
+                        if(link.includes("/aboutme.html#movet")){
+                            element[i].href="/aboutme.html#"
+                        }
+                    }
+                    var navbar = document.getElementById("navbar");
+                    navbar.style.display="none";
+                    var navigation = document.getElementById("navigation");
+                    navigation.style.display="block";
+                }
+                if(currentDevice==="Desktop"){
+                    console.log("Nothing")
+                    window.onscroll = function() {myFunction()};
+                    var navigation = document.getElementById("navigation");
+                    navigation.style.diplay="none";
+                    var navbar = document.getElementById("navbar");
+                    var sticky = navbar.offsetTop;
+                    navbar.style.display="block";
+                    function myFunction() {
+                        if (window.pageYOffset >= sticky) {
+                            navbar.classList.add("sticky")
+                        } 
+                        else {
+                            navbar.classList.remove("sticky");
+                        }
+                    }
+                }
             }
          </script>
          <div id="movet" class="popup">
@@ -96,40 +141,47 @@
                 <input checked type="radio" value="no" id = "No" name="options">
             </h3>
             <script type="text/javascript">
-                window.onload=dragElement(document.getElementById("movet"));
-                function dragElement(elmnt) {
-                var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-                if (document.getElementById(elmnt.id + "header")) {
-                    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-                } else {
-                    elmnt.onmousedown = dragMouseDown;
+                window.onload=checkDevice()
+                function checkDevice(){
+                    let currentDevice=localStorage.getItem("Device");
+                    if(currentDevice=="Desktop"){
+                        window.onload=dragElement(document.getElementById("movet"));
+                        function dragElement(elmnt) {
+                        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+                        if (document.getElementById(elmnt.id + "header")) {
+                            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+                        } 
+                        else {
+                            elmnt.onmousedown = dragMouseDown;
+                        }
+                        function dragMouseDown(e) {
+                            e = e || window.event;
+                            e.preventDefault();
+                            pos3 = e.clientX;
+                            pos4 = e.clientY;
+                            document.onmouseup = closeDragElement;
+                            document.onmousemove = elementDrag;
+                        }
+                        function elementDrag(e) {
+                            e = e || window.event;
+                            e.preventDefault();
+                            pos1 = pos3 - e.clientX;
+                            pos2 = pos4 - e.clientY;
+                            pos3 = e.clientX;
+                            pos4 = e.clientY;
+                            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+                        }
+                        function closeDragElement() {
+                            document.onmouseup = null;
+                            document.onmousemove = null;
+                        }
+                    }
                 }
+                else{
 
-                function dragMouseDown(e) {
-                    e = e || window.event;
-                    e.preventDefault();
-                    pos3 = e.clientX;
-                    pos4 = e.clientY;
-                    document.onmouseup = closeDragElement;
-                    document.onmousemove = elementDrag;
                 }
-
-                function elementDrag(e) {
-                    e = e || window.event;
-                    e.preventDefault();
-                    pos1 = pos3 - e.clientX;
-                    pos2 = pos4 - e.clientY;
-                    pos3 = e.clientX;
-                    pos4 = e.clientY;
-                    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-                    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-                }
-
-                function closeDragElement() {
-                    document.onmouseup = null;
-                    document.onmousemove = null;
-                }
-                }
+            }
             </script>
         </div>   
     </header>
