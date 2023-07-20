@@ -49,3 +49,11 @@ else if (tar.includes("readme")){
         window.location.replace("https://thuongdev.pages.dev/README");
     }
 }
+else if (tar.includes("setting")){
+    if(tar.includes("https://viantetech.github.io")){             
+        window.location.replace("https://viantetech.github.io/settings");
+    }
+    else if(tar.includes("https://thuongdev.pages.dev")){ 
+        window.location.replace("https://thuongdev.pages.dev/settings");
+    }
+}

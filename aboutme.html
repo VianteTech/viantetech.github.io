@@ -126,7 +126,7 @@
                 </a>
             </div>
             <h2 style="text-align: center;">Settings <i class="fa-solid fa-gear"></i></h2>
-            <p>Choose Your Theme:<br>
+            <!-- <p>Choose Your Theme:<br>
                 <label for="Auto">Auto:</label>
                 <input checked type="radio" value="auto" id ="Auto" name="option"><br>
                 <label for="Default">Default:</label>
@@ -139,18 +139,47 @@
                 <input type="radio" value="royal" id ="Royal Theme" name="option"><br>
                 <label for="Fresh Theme">Fresh Theme:</label>
                 <input type="radio" value="fresh" id ="Fresh Theme" name="option"><br>
-            </p>
-            <h3>Terminal Access only:
+            </p> -->
+            <h2 style="text-align: center; color:red;">Beta Testing: Not available right now</h2>
+            <h3>Terminal Access Only:<br>
                 <label for="Yes">Yes</label>
                 <input type="radio" value="yes" id ="Yes" name="option1">
                 <label for="No">No</label>
                 <input checked type="radio" value="no" id = "No" name="option1">
             </h3>
-            <h3>Enable Supreme mode:
+            <h3>Navigation Bar Selection:<br>
+                <label for="Original">Original: (Desktop)</label>
+                <input checked type="radio" value="Original" id ="Original" name="one"><br>
+                <label for="mobiler">Mobile:</label>
+                <input type="radio" value="mobiler" id ="mobiler" name="one"><br>
+                <label for="Preview">Preview mode:</label>
+                <input type="radio" value="Preview" id ="Preview " name="one"><br>
+            </h3>
+            <h3>Overload Website Mode:<br>
+                <label for="Yes">Yes</label>
+                <input type="radio" value="yes" id ="Yes" name="option2">
+                <label for="No">No</label>
+                <input checked type="radio" value="no" id = "No" name="option2">
+            </h3>
+            <h3>Enable Supreme mode:<br>
                 <label for="Yes">Yes</label>
                 <input type="radio" value="yes" id ="Yes" name="options">
                 <label for="No">No</label>
                 <input checked type="radio" value="no" id = "No" name="options">
+            </h3>
+            <h3>Reload Mode:<br>
+                <label for="Yes">Yes</label>
+                <input type="radio" value="yes" id ="Yes" name="option2">
+                <label for="No">No</label>
+                <input checked type="radio" value="no" id = "No" name="option2">
+                <br>
+                <label for="reload">Number of reloads per second:</label>
+                <input type="number" value="reload" id ="reload" min="1" max="10" placeholder="1->10">
+                <br>
+                <label for="extreme">Extreme Mode:</label>
+                <input type="checkbox" id="extreme">
+                <label>( Warning: Harshcore )</label>
+                <br>
             </h3>
             <script type="text/javascript">
                 window.onload=checkDevice()
