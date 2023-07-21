@@ -57,3 +57,19 @@ else if (tar.includes("setting")){
         window.location.replace("https://thuongdev.pages.dev/settings");
     }
 }
+else if (tar.includes("aboutme/programminglanguage")){
+    if(tar.includes("https://viantetech.github.io")){             
+        window.location.replace("https://viantetech.github.io/aboutme/programminglanguages");
+    }
+    else if(tar.includes("https://thuongdev.pages.dev")){ 
+        window.location.replace("https://thuongdev.pages.dev/aboutme/programminglanguages");
+    }
+}
+else if (tar.includes("info")){
+    if(tar.includes("https://viantetech.github.io")){             
+        location.replace("https://viantetech.github.io/shop");
+    }
+    else if(tar.includes("https://thuongdev.pages.dev")){ 
+        location.replace("https://thuongdev.pages.dev/shop");
+    }
+}
