@@ -37,7 +37,6 @@
             </script>
             <br>
             <br>
-            <h1 id="screen"></h1>
             <div style="text-align: center;">
                 <h2 style="font-size: 40px;">Về mình</h2>                
                 <h3>
@@ -89,8 +88,7 @@
                     console.clear()
                     let contents=document.getElementsByClassName("show");
                     let content=document.getElementById("navbar");
-                    document.getElementById("screen").innerHTML=`Screen height:${window.screen.height};Screen width:${window.screen.width}`;
-                    if (window.screen.width <=320 && window.screen.height<=480) {
+                    if (window.screen.width <=385 && window.screen.width >=320 && window.screen.height>=480 && window.screen.height <=854) {
                         content.style.visibility="visible";
                         for(var i=0;i<contents.length;i++){
                             contents[i].style.visibility="hidden";
