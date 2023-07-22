@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href=""/>
+    <title>Cao Xuan Thuong - A Full Stack Developer (Beginner)</title>
+    <script src="https://kit.fontawesome.com/fda81483dd.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="sticky">
+                <h2>
+                    <a href="/improve/caoxuanthuong.dev.html" target="_self" style="color:blue">Cao Xuân Thưởng</a>
+                    <a style="position:absolute;right:0; margin-right:160px; color:orange;" href="/improve/caoxuanthuong.dev/aboutme.html">Về Mình</a>
+                    <a style="position:absolute;right:0; color:orange;">Những Dự Án</a>
+                </h2>
+            </div>
+        </header>
+        <main>
+            <br>
+            <br>
+            <div style="text-align: center;">
+                <h2 style="font-size: 40px;">Về mình</h2>                
+                <h3>
+                    Ayo, mình là Cao Xuân Thưởng. Mình là một học sinh có niềm đam<br>
+                    mê với lập trình (tin học). Mọi người có thể tìm mình trên <a href="https://github.com/VianTeTech" target="_blank">Github</a><br>
+                    Đừng để ý phần giới thiệu của mình trên Github nha :)<br>
+                </h3>
+            </div>
+            <hr>
+            <div style="text-align: center;">
+                <h2 style="font-size: 40px;">Thông tin</h2>                
+                <h3>
+                    Hành trình của mình đến với niềm đam mê lập trình đã bắt đầu từ lức mình còn là học sinh trung học cơ sở.<br>
+                    Mình tình cờ thấy phần computer programming trong danh sách các<br>
+                    khóa học của <label style="color:red">Khan Academy</label>, lúc đó mình đã học xong một số bài toán nâng cao để trao dồi thêm kiên thức. 
+                    <br>Mình đã vào học thử 1 khóa về Javascript, mình càng học thì thấy càng hay.
+                    <br>Sau khi mình đã học xong khóa cơ bản về Javascript thì mình đã học HTML và CSS.
+                    <br>Những phần quan trọng để tạo ra một trang web. Từ đó mình càng thấy lập trình rất là hay.
+                    <br>Mình đã tự học lập trình qua các bài giảng và guidebooks về các ngôn ngữ lập trình.
+                    <br>Mình đã học lập trình python qua youtube <label style="color:red">Dũng lại lập trình</label>.
+                </h3>
+            </div>
+            <hr>
+            <div style="text-align: center;">
+                <h2 style="font-size: 40px;">Trình độ (học tập)</h2>                
+                <h3>
+                    Còn về trình độ của mình cũng tầm thường thôi, mình chỉ là một giọt nước nhỏ trong một đại dương rộng mênh mông.<br>
+                    Nhưng mà mình vẫn còn một chặng đường dài còn đang chờ ở phía trước, để chinh phục ước mơ của mình, mình phải trau dồi kiến thức.<br>
+                </h3>
+            </div>
+            <br>
+        </main>
+        <footer>
+            <hr>
+            <div style="text-align: center;">
+                <h3 style="margin-left: -100px;">Mình là <label style="margin-left:150px">Thời gian hiện tại</label></h3>
+                <h3 style="margin-left: -170px;">Cao Xuân Thưởng <label style="margin-left:65px" id="time"></label></h3></h3>
+            </div>
+            <hr>
+            <div style="text-align: center;">
+                <h3 style="margin-left: -60px;"><a href="/improve/caoxuanthuong.dev.html">Trang Chủ</a> <label style="margin-left:80px"><a href="https://github.com/VianTeTech" target="_blank">Github</a> <label style="margin-left:80px">Discord (main)</label></label></h3>
+                <h3 style="margin-left: -70px;"><a href="/improve/caoxuanthuong.dev/aboutme.html">Về mình</a> <label style="margin-left:100px">Youtube <label style="margin-left:80px">Discord (alt)</label></label></h3>
+                <h3 style="margin-left: -110px;">Những dự án <label style="margin-left:60px">Twitter <label style="margin-left:110px">AO3</label></label></h3>
+            </div>
+            <script type="text/javascript">
+                window.onload=Displaytime();
+                function Displaytime(){
+                    let currenttime= new Date().toLocaleTimeString();
+                    document.getElementById('time').innerHTML=currenttime;
+                    setTimeout(Displaytime, 1000); 
+                }
+            </script>
+        </footer>
+        <style>
+            div.sticky {
+              position: -webkit-sticky;
+              position: sticky;
+              top: 0;
+              background-color: transparent;
+            }
+            a{
+                text-decoration: none;
+            }
+            body{
+                background-image: linear-gradient(to right,white,pink);
+            }
+        </style>
+    </body>
+</html>
