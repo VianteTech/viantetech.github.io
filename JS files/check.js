@@ -19,50 +19,50 @@ else if (tar.includes("home")){
 }
 else if (tar.includes("contact")){
     if(tar.includes("https://viantetech.github.io")){   
-        window.location.replace("https://viantetech.github.io/contacts");
+        location.replace("https://viantetech.github.io/contacts");
     }
     else if(tar.includes("https://thuongdev.pages.dev")){ 
-        window.location.replace("https://thuongdev.pages.dev/contacts");
+        location.replace("https://thuongdev.pages.dev/contacts");
     }
 }
 else if (tar.includes("myproject")){
     if(tar.includes("https://viantetech.github.io")){    
-        window.location.replace("https://viantetech.github.io/myprojects");
+        location.replace("https://viantetech.github.io/myprojects");
     }
     else if(tar.includes("https://thuongdev.pages.dev")){ 
-        window.location.replace("https://thuongdev.pages.dev/myprojects");
+        location.replace("https://thuongdev.pages.dev/myprojects");
     }
 }
 else if (tar.includes("rick")||tar.includes("roll")){
     if(tar.includes("https://viantetech.github.io")){             
-        window.location.replace("https://viantetech.github.io/rickroll");
+        location.replace("https://viantetech.github.io/rickroll");
     }
     else if(tar.includes("https://thuongdev.pages.dev")){ 
-        window.location.replace("https://thuongdev.pages.dev/rickroll");
+        location.replace("https://thuongdev.pages.dev/rickroll");
     }
 }
 else if (tar.includes("readme")){
     if(tar.includes("https://viantetech.github.io")){             
-        window.location.replace("https://viantetech.github.io/README");
+        location.replace("https://viantetech.github.io/README");
     }
     else if(tar.includes("https://thuongdev.pages.dev")){ 
-        window.location.replace("https://thuongdev.pages.dev/README");
+        location.replace("https://thuongdev.pages.dev/README");
     }
 }
 else if (tar.includes("setting")){
     if(tar.includes("https://viantetech.github.io")){             
-        window.location.replace("https://viantetech.github.io/settings");
+        location.replace("https://viantetech.github.io/settings");
     }
     else if(tar.includes("https://thuongdev.pages.dev")){ 
-        window.location.replace("https://thuongdev.pages.dev/settings");
+        location.replace("https://thuongdev.pages.dev/settings");
     }
 }
 else if (tar.includes("aboutme/programminglanguage")){
     if(tar.includes("https://viantetech.github.io")){             
-        window.location.replace("https://viantetech.github.io/aboutme/programminglanguages");
+        location.replace("https://viantetech.github.io/aboutme/programminglanguages");
     }
     else if(tar.includes("https://thuongdev.pages.dev")){ 
-        window.location.replace("https://thuongdev.pages.dev/aboutme/programminglanguages");
+        location.replace("https://thuongdev.pages.dev/aboutme/programminglanguages");
     }
 }
 else if (tar.includes("info")){
@@ -81,11 +81,9 @@ else if (tar.includes("new")){
         location.replace("https://thuongdev.pages.dev/improve/caoxuanthuong.dev");
     }
 }
-else if (tar.includes("new/aboutme")){
-    if(tar.includes("https://viantetech.github.io")){             
-        location.replace("https://viantetech.github.io/improve/caoxuanthuong.dev/aboutme");
-    }
-    else if(tar.includes("https://thuongdev.pages.dev")){ 
-        location.replace("https://thuongdev.pages.dev/improve/caoxuanthuong.dev/aboutme");
-    }
+else if (tar==="https://thuongdev.pages.dev/new/aboutme"){
+    location.replace("https://thuongdev.pages.dev/improve/caoxuanthuong.dev/aboutme");
+}
+else if (tar==="https://viantetech.github.io/new/aboutme"){
+    location.replace("https://viantetech.github.io/improve/caoxuanthuong.dev/aboutme");
 }
