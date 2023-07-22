@@ -8,23 +8,39 @@
     <script src="https://kit.fontawesome.com/fda81483dd.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
-            <div class="sticky">
-                <h2>
-                    <a href="/improve/caoxuanthuong.dev.html" target="_self" style="color:blue">Cao Xuân Thưởng</a>
-                    <a style="position:absolute;right:0; margin-right:160px; color:orange;" href="/improve/caoxuanthuong.dev/aboutme.html">Về Mình</a>
-                    <a style="position:absolute;right:0; color:orange;">Những Dự Án</a>
-                </h2>
+        <div class="sticky">
+            <h2>
+                <a href="/improve/caoxuanthuong.dev.html" target="_self" style="color:blue">Cao Xuân Thưởng</a>
+                <a class="show" style="position:absolute;right:0; margin-right:160px; color:orange;" href="/improve/caoxuanthuong.dev/aboutme.html">Về Mình</a>
+                <a class="show" style="position:absolute;right:0; color:orange;">Những Dự Án</a>
+                <span id="navbar" style="position:absolute;right:0;margin-top:-10px;font-size:30px;cursor:pointer">&#9776;</span>
+            </h2>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" id="closenav">&times;</a>
+                <a href="/improve/caoxuanthuong.dev.html">Trang Chủ</a>
+                <a href="/improve/caoxuanthuong.dev/aboutme.html">Về mình</a>
+                <a href="#">Những dự án</a>
+                <a href="/home.html" target="_blank">Official Website</a>
+                <a href="https://www.youtube.com/@42.xuanthuongcao5" target="_blank">Youtube của mình</a>
+                <a href="https://github.com/VianTeTech" target="_blank">Github của mình</a>
             </div>
-        </header>
+        </div>
         <main>
+            <script>
+                document.getElementById("navbar").onclick=function(){
+                  document.getElementById("mySidenav").style.width = "250px";
+                }
+                document.getElementById("closenav").onclick=function(){
+                  document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
             <br>
             <br>
             <div style="text-align: center;">
                 <h2 style="font-size: 40px;">Về mình</h2>                
                 <h3>
-                    Ayo, mình là Cao Xuân Thưởng. Mình là một học sinh có niềm đam<br>
-                    mê với lập trình (tin học). Mọi người có thể tìm mình trên <a href="https://github.com/VianTeTech" target="_blank">Github</a><br>
+                    Ayo, mình là Cao Xuân Thưởng. Mình là một học sinh có niềm đam mê với lập trình (tin học). 
+                    <br>Mọi người có thể tìm mình ở trên <a href="https://github.com/VianTeTech" target="_blank">Github</a><br>
                     Đừng để ý phần giới thiệu của mình trên Github nha :)<br>
                 </h3>
             </div>
@@ -33,11 +49,12 @@
                 <h2 style="font-size: 40px;">Thông tin</h2>                
                 <h3>
                     Hành trình của mình đến với niềm đam mê lập trình đã bắt đầu từ lức mình còn là học sinh trung học cơ sở.<br>
-                    Mình tình cờ thấy phần computer programming trong danh sách các<br>
-                    khóa học của <label style="color:red">Khan Academy</label>, lúc đó mình đã học xong một số bài toán nâng cao để trao dồi thêm kiên thức. 
+                    Mình tình cờ thấy phần Computer Programming trong danh sách các khóa học của <label style="color:red">Khan Academy</label>. 
+                    <br>Lúc đó mình đã học xong một số bài toán nâng cao để trao dồi thêm kiên thức. 
                     <br>Mình đã vào học thử 1 khóa về Javascript, mình càng học thì thấy càng hay.
                     <br>Sau khi mình đã học xong khóa cơ bản về Javascript thì mình đã học HTML và CSS.
-                    <br>Những phần quan trọng để tạo ra một trang web. Từ đó mình càng thấy lập trình rất là hay.
+                    <br>Hai trong những phần quan trọng để tạo ra một trang web. Từ đó mình càng thấy lập trình rất là hay và không quá nhàm chán.
+                    <br>Mỗi khi mình sửa được code của mình thì mình rất là vui và cũng là động lực giúp mình phát triển khả năng lập trình.
                     <br>Mình đã tự học lập trình qua các bài giảng và guidebooks về các ngôn ngữ lập trình.
                     <br>Mình đã học lập trình python qua youtube <label style="color:red">Dũng lại lập trình</label>.
                 </h3>
@@ -65,6 +82,27 @@
                 <h3 style="margin-left: -110px;">Những dự án <label style="margin-left:60px">Twitter <label style="margin-left:110px">AO3</label></label></h3>
             </div>
             <script type="text/javascript">
+                window.onload=DisplayDevice()
+                function DisplayDevice(){
+                    console.clear()
+                    let contents=document.getElementsByClassName("show");
+                    let content=document.getElementById("navbar");
+                    if (window.screen.width <=320 && window.screen.height<=480) {
+                        content.style.visibility="visible";
+                        for(var i=0;i<contents.length;i++){
+                            contents[i].style.visibility="hidden";
+                        }
+                        console.log("You're using a Mobile Device now.")
+                    } 
+                    else{
+                        content.style.visibility="hidden";
+                        for(var i=0;i<contents.length;i++){
+                            contents[i].style.visibility="visible";
+                        }
+                        console.log("You're using a Desktop/Laptop/PC now.")
+                    }
+                    setTimeout(DisplayDevice,200)
+                }
                 window.onload=Displaytime();
                 function Displaytime(){
                     let currenttime= new Date().toLocaleTimeString();
@@ -80,11 +118,48 @@
               top: 0;
               background-color: transparent;
             }
+            div h2 a:hover{
+                background-color:magenta;
+            }
             a{
                 text-decoration: none;
             }
             body{
                 background-image: linear-gradient(to right,white,pink);
+            }
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+            .sidenav a{
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
             }
         </style>
     </body>

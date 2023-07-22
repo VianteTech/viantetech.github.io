@@ -73,3 +73,19 @@ else if (tar.includes("info")){
         location.replace("https://thuongdev.pages.dev/shop");
     }
 }
+else if (tar.includes("new")){
+    if(tar.includes("https://viantetech.github.io")){             
+        location.replace("https://viantetech.github.io/improve/caoxuanthuong.dev");
+    }
+    else if(tar.includes("https://thuongdev.pages.dev")){ 
+        location.replace("https://thuongdev.pages.dev/improve/caoxuanthuong.dev");
+    }
+}
+else if (tar.includes("new/aboutme")){
+    if(tar.includes("https://viantetech.github.io")){             
+        location.replace("https://viantetech.github.io/improve/caoxuanthuong.dev/aboutme");
+    }
+    else if(tar.includes("https://thuongdev.pages.dev")){ 
+        location.replace("https://thuongdev.pages.dev/improve/caoxuanthuong.dev/aboutme");
+    }
+}
