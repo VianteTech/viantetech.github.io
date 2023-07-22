@@ -1,7 +1,13 @@
 let tar=window.location.href;
 tar = tar.replace(/%20/g, "");
 tar = tar.toLowerCase();
-if (tar.includes("aboutme")){
+if (tar==="https://thuongdev.pages.dev/new/aboutme"){
+    location.replace("https://thuongdev.pages.dev/improve/caoxuanthuong.dev/aboutme");
+}
+else if (tar==="https://viantetech.github.io/new/aboutme"){
+    location.replace("https://viantetech.github.io/improve/caoxuanthuong.dev/aboutme");
+}
+else if (tar.includes("aboutme")){
     if(tar.includes("https://viantetech.github.io")){
         window.location.replace("https://viantetech.github.io/aboutme");
     }
@@ -80,10 +86,4 @@ else if (tar.includes("new")){
     else if(tar.includes("https://thuongdev.pages.dev")){ 
         location.replace("https://thuongdev.pages.dev/improve/caoxuanthuong.dev");
     }
-}
-else if (tar==="https://thuongdev.pages.dev/new/aboutme"){
-    location.replace("https://thuongdev.pages.dev/improve/caoxuanthuong.dev/aboutme");
-}
-else if (tar==="https://viantetech.github.io/new/aboutme"){
-    location.replace("https://viantetech.github.io/improve/caoxuanthuong.dev/aboutme");
 }
